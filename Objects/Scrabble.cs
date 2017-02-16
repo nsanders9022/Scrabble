@@ -12,7 +12,7 @@ namespace ScrabbleApp.Objects
       {'a', 1},
       {'e', 1},
       {'i', 1},
-      {'0', 1},
+      {'o', 1},
       {'u', 1},
       {'l', 1},
       {'n', 1},
@@ -53,17 +53,18 @@ namespace ScrabbleApp.Objects
     {
       char[] newWord = GetWord().ToCharArray();
 
+      int wordScore = 0;
       foreach(char letter in newWord)
       {
         foreach (KeyValuePair<char, int> result in scoreDict)
         {
           if (letter == result.Key)
           {
-            return result.Value;
+            wordScore += result.Value;
           }
         }
       }
-      return 0;
+      return wordScore;
     }
   }
 }
