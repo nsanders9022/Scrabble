@@ -9,7 +9,7 @@ namespace ScrabbleApp
       public void CalculateScore_SingleLetter_Number()
       {
         //Arrange
-        string oneLetter = "a";
+        string oneLetter = "n";
         //Act
         Scrabble newWord = new Scrabble(oneLetter);
         //Assert
