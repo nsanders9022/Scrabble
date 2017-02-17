@@ -17,6 +17,10 @@ namespace ScrabbleApp
         int result = newWord.CalculateScore();
         return View["index.cshtml", result];
       };
+
+      Post["/new"] = _ => {
+        return View["index.cshtml"];
+      };
     }
   }
 }
